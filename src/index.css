@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.logo-img{
+  filter: invert(35%) sepia(55%) saturate(500%) hue-rotate(176deg) brightness(100%) contrast(200%);
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+  }
+  
+  .animate-marquee {
+  animation: marquee 40s linear infinite;
+  }
+
+  @keyframes marquee-left-to-right {
+    from{
+      transform: translateX(-50%);
+    }
+    to{
+      transform: translateX(0);
+    }
+  }
+  .animate-marquee-reverse {
+    animation: marquee-left-to-right 50s linear infinite;
+  }
+/* team work */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
